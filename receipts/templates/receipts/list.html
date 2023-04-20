@@ -25,8 +25,8 @@ My Receipts
                 <td>{{ receipt.total }}</td>
                 <td>{{ receipt.tax }}</td>
                 <td>{{ receipt.date|date:"m/d/y" }}</td>
-                <td>{{ receipt.category_name }}</td>
-                <td>{{ receipt.account_name }}</td>
+                <td>{{ receipt.category.name }}</td>
+                <td>{{ receipt.account.name }}</td>
             </tr>
             {% endfor %}
         </tbody>

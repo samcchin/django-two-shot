@@ -10,3 +10,4 @@ urlpatterns = [
     path("categories/create/", create_category, name="create_category"),
     path("accounts/create/", create_account, name="create_account"),
 ]
+

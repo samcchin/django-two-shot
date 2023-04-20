@@ -26,6 +26,8 @@ def create_receipt(request):
             return redirect("home")
     else:
         form = ReceiptForm()
+        form.fields['category'].queryset = ExpenseCategory.objects.filter(owner=request.user)
+        form.fields['account'].queryset = Account.objects.filter(owner=request.user)
     context = {
         "form": form,
     }
